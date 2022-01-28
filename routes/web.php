@@ -20,15 +20,12 @@ Route::get('/pizzas', function () {
     return view('pizzas');
 });
 Route::get('/pizzas-details', function () {
-    $details = [
-        'user_first_name' => 'fist name',
-        'user_last_name' => 'last name',
-        'user_name' => 'user name',
-        'user_email' => 'user@email.com',
-        'price' => 8
+    $pizzas = [
+        ['type' => 'hawaiian', 'base' => 'cheesy crust'],
+        ['type' => 'volcano', 'base' => 'garlic crust'],
+        ['type' => 'veg supreme', 'base' => 'thin & crispy']
     ];
-
-    return view('pizzas', $details);
+    return view('pizzas', ['pizzas' => $pizzas]);
 });
 Route::get('/get-json-object', function () {
     return ['user_first_name' => 'fist name', 'user_last_name' => 'last name', 'user_name' => 'user name', 'user_email' => 'user@email.com'];
