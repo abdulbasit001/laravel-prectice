@@ -18,8 +18,20 @@
          </h1>
          <p>
             {{$user_first_name }} - {{$user_last_name}} - {{$user_name}} - {{$user_email}}
+            @if($price > 15) <p>this pizza is expensive
+            </p>
+            @elseif($price < 7) <p>this pizza is cheap</p>
+            @else
+            <p>price is moderate</p>
+            @endif
+            @php
+               $name='abdul basit';
+               echo ($name)
+            @endphp
+
          </p>
       </div>
    </div>
 </body>
+
 </html>

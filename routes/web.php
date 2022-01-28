@@ -21,10 +21,11 @@ Route::get('/pizzas', function () {
 });
 Route::get('/pizzas-details', function () {
     $details = [
-        'user_first_name' => 'fist name', 
-        'user_last_name' => 'last name', 
-        'user_name' => 'user name', 
-        'user_email' => 'user@email.com'
+        'user_first_name' => 'fist name',
+        'user_last_name' => 'last name',
+        'user_name' => 'user name',
+        'user_email' => 'user@email.com',
+        'price' => 8
     ];
 
     return view('pizzas', $details);
